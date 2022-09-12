@@ -1,0 +1,16 @@
+<h1>List urls</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Short url</th>
+    <th>Long Url</th>
+  </tr>
+
+  <% @urls.each do|url| %>
+    <tr>
+      <td><%= link_to url.name,root_path+ url.short_code%></td> 
+      <td><%= url.short_code%></td>
+      <td><%= url.long_url%></td>
+    </tr>  
+  <% end %>
+</table>
